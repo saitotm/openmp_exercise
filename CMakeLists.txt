@@ -13,8 +13,7 @@ find_package(OpenMP)
 
 # Create Main project
 set(SOURCES
-    06array_mul.cpp
-    06_verify.cpp
+    merge_sort.cpp
 )
 
 set(HEADERS
