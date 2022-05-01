@@ -5,6 +5,12 @@ set(ENV{CXX} "/usr/local/opt/llvm/bin/clang++")
 set(ENV{LDFLAGS} "-L/usr/local/opt/llvm/lib")
 set(ENV{CPPFLAGS} "-I/usr/local/opt/llvm/include")
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -Wextra")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wshadow -Wconversion -Wfloat-equal -Wno-char-subscripts")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -ftrapv -fsanitize=address,undefined -fno-omit-frame-pointer -fno-sanitize-recover")
+message(STATUS "${CMAKE_CXX_FLAGS}")
+ 
+
 #######################################################################
 #                               Project                               #
 #######################################################################
